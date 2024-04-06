@@ -1,0 +1,87 @@
+package university.management.system;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class Project extends JFrame implements ActionListener {
+
+    Project() {
+        setSize(1540, 850);
+        setLayout(null);
+        
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/third.jpg"));
+        Image i2 = i1.getImage().getScaledInstance(1500, 750, Image.SCALE_DEFAULT);
+        ImageIcon i3 = new ImageIcon(i2);
+        JLabel image = new JLabel(i3);
+        image.setBounds(0, 0, 1500, 750);
+        add(image);
+
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.setLayout(new FlowLayout());
+        buttonPanel.setSize(new Dimension(1500, 100));
+        buttonPanel.setOpaque(false);
+
+        String[] buttonNames = {"New Faculty Information", "New Student Information", "View Faculty Details",
+                                "View Student Details", "Faculty Leave", "Student Leave",
+                                "Faculty Leave Details", "Student Leave Details", "Enter Marks",
+                                "Examination Results", "Update Faculty Details", "Update Student Details",
+                                "Fee Structure", "About", "Exit"};
+        JButton[] buttons = new JButton[buttonNames.length];
+        for (int i = 0; i < buttonNames.length; i++) {
+            buttons[i] = new JButton(buttonNames[i]);
+            buttons[i].addActionListener(this);
+            buttons[i].setFocusPainted(false);
+            buttons[i].setBorderPainted(false);
+            buttons[i].setContentAreaFilled(false);
+            buttons[i].setForeground(Color.WHITE);
+            buttonPanel.add(buttons[i]);
+        }
+
+        image.setLayout(new BorderLayout());
+        image.add(buttonPanel, BorderLayout.NORTH);
+
+        setVisible(true);
+    }
+    
+    public void actionPerformed(ActionEvent ae) {
+        String msg = ae.getActionCommand();
+        
+        if (msg.equals("Exit")) {
+            setVisible(false);
+        } else if (msg.equals("New Faculty Information")) {
+            // Add action for New Faculty Information
+        } else if (msg.equals("New Student Information")) {
+            // Add action for New Student Information
+        } else if (msg.equals("View Faculty Details")) {
+            // Add action for View Faculty Details
+        } else if (msg.equals("View Student Details")) {
+            // Add action for View Student Details
+        } else if (msg.equals("Faculty Leave")) {
+            // Add action for Faculty Leave
+        } else if (msg.equals("Student Leave")) {
+            // Add action for Student Leave
+        } else if (msg.equals("Faculty Leave Details")) {
+            // Add action for Faculty Leave Details
+        } else if (msg.equals("Student Leave Details")) {
+            // Add action for Student Leave Details
+        } else if (msg.equals("Update Faculty Details")) {
+            // Add action for Update Faculty Details
+        } else if (msg.equals("Update Student Details")) {
+            // Add action for Update Student Details
+        } else if (msg.equals("Enter Marks")) {
+            // Add action for Enter Marks
+        } else if (msg.equals("Examination Results")) {
+            // Add action for Examination Results
+        } else if (msg.equals("Fee Structure")) {
+            // Add action for Fee Structure
+        } else if (msg.equals("About")) {
+            // Add action for About
+        }
+        // Add more actions here as per requirement
+    }
+
+    public static void main(String[] args) {
+        new Project();
+    }
+}
