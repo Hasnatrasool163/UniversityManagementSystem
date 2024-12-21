@@ -44,6 +44,8 @@ Before running the University Management System, ensure you have the following i
 
 - Java Development Kit (JDK) - Version 8 or later
 - Any Java IDE (Integrated Development Environment) like IntelliJ IDEA, Eclipse, or NetBeans
+- MySql DataBase + workBench  for windows , mac users.
+- MariaDB for linux users
 
 ### Installation
 
